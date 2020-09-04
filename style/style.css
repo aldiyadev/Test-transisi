@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --purple: #252A40;
+  --blue: #42D5D5;
+  --pastel-green: #92D2D0;
+  --pastel-blue: #E2EEFB;
+  --pastel-orange: #FEEDE6;
+  --disabled: #EBEFF2;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--purple);
+  position: relative;
+}
+
+body .mini-1 {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 30vh;
+  z-index: -1;
+}
+
+body .mini-2 {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 30vh;
+  z-index: -1;
+}
+
+.grid {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.grid-left {
+  color: white;
+  font-size: 18px;
+  padding: .5em;
+}
+
+@media (max-width: 991px) {
+  .grid-left {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .grid-left {
+    font-size: 15px;
+  }
+}
+
+.grid-left .logo img {
+  width: 50px;
+}
+
+.grid-left .main {
+  padding: 0 7em;
+}
+
+.grid-left .main .header {
+  padding: 1em 0;
+}
+
+.grid-left .main .header h1 {
+  font-size: 1.5em;
+}
+
+.grid-left .main .header p {
+  font-size: .9em;
+  color: #8a8a8a;
+}
+
+.grid-left .main .search {
+  width: 100%;
+  background-color: #3A3F53;
+  padding: .8em 1em;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid-left .main .search input {
+  outline: none;
+  border: none;
+  background-color: #3A3F53;
+  padding: 0 2em;
+  width: 100%;
+  color: white;
+}
+
+.grid-left .main .search ::-webkit-input-placeholder {
+  font-size: 1em;
+  color: #bebebe;
+}
+
+.grid-left .main .search :-ms-input-placeholder {
+  font-size: 1em;
+  color: #bebebe;
+}
+
+.grid-left .main .search ::-ms-input-placeholder {
+  font-size: 1em;
+  color: #bebebe;
+}
+
+.grid-left .main .search ::placeholder {
+  font-size: 1em;
+  color: #bebebe;
+}
+
+.grid-left .projects h3 {
+  padding: 2em 0 1em 0;
+}
+
+.grid-left .projects h3 span {
+  color: #777777;
+  font-size: .7em;
+}
+
+.grid-left .projects .projects-grid {
+  display: -ms-grid;
+  display: grid;
+  min-width: 80%;
+  -ms-grid-columns: (minmax(50px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 2em 1em;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  justify-items: center;
+}
+
+.grid-left .projects .projects-grid .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.grid-left .projects .projects-grid .card img {
+  width: 3em;
+}
+
+.grid-left .projects .projects-grid .card .circle {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  width: 1em;
+}
+
+.grid-left .projects .projects-grid .card p {
+  margin: 1em 0;
+  font-weight: 300;
+  font-size: .8em;
+  color: #bbbbbb;
+  text-align: center;
+}
+
+.grid-right {
+  background-color: white;
+  margin: 18px;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.grid-right .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px;
+}
+
+.grid-right .header .text h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.grid-right .header .text p {
+  font-size: .8em;
+  color: #a5a5a5;
+}
+
+.grid-right .header .profiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.grid-right .header .profiles img {
+  width: 50px;
+}
+
+.grid-right .header .profiles .profile:nth-child(1) {
+  position: relative;
+  z-index: 3;
+}
+
+.grid-right .header .profiles .profile:nth-child(2) {
+  position: relative;
+  left: -10px;
+  z-index: 2;
+}
+
+.grid-right .header .profiles .profile:nth-child(3) {
+  position: relative;
+  left: -20px;
+  z-index: 1;
+}
+
+.grid-right .header .profiles .add img {
+  width: 45px;
+}
+
+.grid-right .task-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 30px;
+  border-bottom: 1px solid #cfcfcf;
+  padding-bottom: 1em;
+}
+
+.grid-right .task-header i {
+  color: #c2c2c2;
+}
+/*# sourceMappingURL=style.css.map */

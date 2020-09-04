@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: #252A40;
+    --blue: #42D5D5;
+    --pastel-green: #92D2D0;
+    --pastel-blue: #E2EEFB;
+    --pastel-orange: #FEEDE6;
+    --disabled: #EBEFF2;
+
+}
+
+$monitor : 991px;
+$tablet : 768px;
+$mobile : 575px;
+
+@mixin monitor {
+    @media(max-width: #{$monitor}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(max-width:#{$mobile}) {
+        @content;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--purple);
+    position: relative;
+
+    .mini-1 {
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        width: 30vh;
+        z-index: -1;
+    }
+
+    .mini-2 {
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        width: 30vh;
+        z-index: -1;
+    }
+}
+
+.grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-left {
+    color: white;
+    font-size: 18px;
+    padding: .5em;
+
+    @include monitor {
+        font-size: 15px;
+    }
+
+    @include mobile {
+        font-size: 15px;
+    }
+
+    .logo {
+        img {
+            width: 50px;
+        }
+    }
+
+    .main {
+        padding: 0 7em;
+
+        .header {
+            padding: 1em 0;
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: .9em;
+                color: rgb(138, 138, 138);
+            }
+        }
+
+        .search {
+            width: 100%;
+            background-color: #3A3F53;
+            padding: .8em 1em;
+            border-radius: 15px;
+            display: flex;
+
+            input {
+                outline: none;
+                border: none;
+                background-color: #3A3F53;
+                padding: 0 2em;
+                width: 100%;
+                color: white;
+            }
+
+            ::placeholder {
+                font-size: 1em;
+                color: rgb(190, 190, 190);
+            }
+        }
+    }
+
+    .projects {
+        h3 {
+            padding: 2em 0 1em 0;
+
+            span {
+                color: rgb(119, 119, 119);
+                font-size: .7em;
+            }
+        }
+
+        .projects-grid {
+            display: grid;
+            min-width: 80%;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 2em 1em;
+            justify-content: left;
+            justify-items: center;
+
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+
+                img {
+                    width: 3em;
+                }
+
+                .circle {
+                    position: absolute;
+                    top: -10px;
+                    right: -5px;
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+                    width: 1em;
+                }
+
+                p {
+                    margin: 1em 0;
+                    font-weight: 300;
+                    font-size: .8em;
+                    color: rgb(187, 187, 187);
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.grid-right {
+    background-color: white;
+    margin: 18px;
+    border-radius: 15px;
+    font-size: 16px;
+
+    .header {
+        display: flex;
+        margin: 30px;
+
+        .text {
+            h2 {
+                font-size: 1.8em;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: .8em;
+                color: rgb(165, 165, 165);
+            }
+        }
+
+        .profiles {
+            display: flex;
+            align-items: flex-start;
+
+            img {
+                width: 50px;
+            }
+
+            .profile:nth-child(1) {
+                position: relative;
+                z-index: 3;
+            }
+
+            .profile:nth-child(2) {
+                position: relative;
+                left: -10px;
+                z-index: 2;
+            }
+
+            .profile:nth-child(3) {
+                position: relative;
+                left: -20px;
+                z-index: 1;
+            }
+
+            .add img {
+                width: 45px;
+            }
+        }
+    }
+
+    .task-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 30px;
+        border-bottom: 1px solid rgb(207, 207, 207);
+        padding-bottom: 1em;
+
+        i {
+            color: rgb(194, 194, 194);
+        }
+    }
+}
