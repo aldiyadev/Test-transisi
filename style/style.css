@@ -39,11 +39,18 @@ body {
 .grid-left {
   color: white;
   font-size: 18px;
+  margin: 1em 1em;
 }
 
 @media (max-width: 991px) {
   .grid-left {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-left {
+    min-width: 80%;
   }
 }
 
@@ -54,11 +61,22 @@ body {
 }
 
 .grid-left .logo {
-  margin: 20px;
+  position: absolute;
+  left: 2em;
 }
 
 .grid-left .logo img {
   width: 50px;
+}
+
+.grid-left .main {
+  margin-top: 4em;
+}
+
+@media (max-width: 991px) {
+  .grid-left .main {
+    margin-top: 5em;
+  }
 }
 
 .grid-left .main .header {
@@ -113,6 +131,12 @@ body {
   color: #bebebe;
 }
 
+@media (max-width: 575px) {
+  .grid-left .projects {
+    text-align: center;
+  }
+}
+
 .grid-left .projects h3 {
   padding: 2em 0 1em 0;
 }
@@ -126,8 +150,8 @@ body {
   display: -ms-grid;
   display: grid;
   min-width: 80%;
-  -ms-grid-columns: (minmax(6em, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
+  -ms-grid-columns: (minmax(7em, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
   gap: 2em 1em;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
@@ -141,6 +165,13 @@ body {
   .grid-left .projects .projects-grid {
     -webkit-transform: translateX(-10px);
             transform: translateX(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-left .projects .projects-grid {
+    min-width: unset;
+    width: 100%;
   }
 }
 
@@ -163,7 +194,13 @@ body {
 }
 
 .grid-left .projects .projects-grid .card img {
-  width: 4.5em;
+  width: 5em;
+}
+
+@media (max-width: 991px) {
+  .grid-left .projects .projects-grid .card img {
+    width: 5em;
+  }
 }
 
 .grid-left .projects .projects-grid .card .circle {
@@ -201,6 +238,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 20px 50px 20px 50px;
+}
+
+@media (max-width: 575px) {
+  .grid-right .header {
+    margin: 20px 20px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -277,12 +320,24 @@ body {
   padding-bottom: .5em;
 }
 
+@media (max-width: 575px) {
+  .grid-right .task-header {
+    margin: 0 20px;
+  }
+}
+
 .grid-right .task-header i {
   color: #c2c2c2;
 }
 
 .grid-right .task-list {
-  padding: 0 50px .7em 50px;
+  padding: 0 50px 0 50px;
+}
+
+@media (max-width: 575px) {
+  .grid-right .task-list {
+    padding: 0 20px 0 20px;
+  }
 }
 
 .grid-right .task-list ul {
@@ -299,6 +354,14 @@ body {
       -ms-flex-align: center !important;
           align-items: center !important;
   margin: 6px 0;
+}
+
+@media (max-width: 575px) {
+  .grid-right .task-list ul li .bar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .grid-right .task-list ul li .bar .check {
@@ -352,24 +415,5 @@ body {
   padding: .2em 1.7em;
   border-radius: 15px;
   margin: 0 2px;
-}
-
-.grid-right .upcoming {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 50px;
-  border-bottom: 1px solid #cfcfcf;
-  padding-bottom: 1em;
-}
-
-.grid-right .upcoming i {
-  color: #c2c2c2;
 }
 /*# sourceMappingURL=style.css.map */
