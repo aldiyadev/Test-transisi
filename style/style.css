@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap");
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -18,23 +18,6 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--purple);
-  position: relative;
-}
-
-body .mini-1 {
-  position: absolute;
-  top: 0%;
-  left: 50%;
-  width: 30vh;
-  z-index: -1;
-}
-
-body .mini-2 {
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-  width: 30vh;
-  z-index: -1;
 }
 
 .grid {
@@ -43,12 +26,13 @@ body .mini-2 {
   display: grid;
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
+  justify-items: center;
 }
 
 @media (max-width: 768px) {
   .grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
   }
 }
 
@@ -70,15 +54,11 @@ body .mini-2 {
 }
 
 .grid-left .logo {
-  margin: 10px;
+  margin: 20px;
 }
 
 .grid-left .logo img {
   width: 50px;
-}
-
-.grid-left .main {
-  padding: 0 7em;
 }
 
 .grid-left .main .header {

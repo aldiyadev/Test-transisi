@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap');
 
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,39 +42,40 @@ $mobile : 575px;
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--purple);
-    position: relative;
+    
 
-    .mini-1 {
-        position: absolute;
-        top: 0%;
-        left: 50%;
-        width: 30vh;
-        z-index: -1;
-    }
+    // .mini-1 {
+    //     position: absolute;
+    //     top: 0%;
+    //     left: 50%;
+    //     width: 30vh;
+    //     z-index: -1;
+    // }
 
-    .mini-2 {
-        position: absolute;
-        bottom: 0;
-        left: 5%;
-        width: 30vh;
-        z-index: -1;
-    }
+    // .mini-2 {
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 5%;
+    //     width: 30vh;
+    //     z-index: -1;
+    // }
 }
 
 .grid {
+    
     margin: 0 auto;
     display: grid;
     grid-template-columns: 50% 50%; 
+    justify-items: center;
 
     @include tablet {
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
     }
 }
 
 .grid-left {
     color: white;
     font-size: 18px;
-    // padding: .5em;
 
     @include monitor {
         font-size: 15px;
@@ -85,14 +86,14 @@ body {
     }
 
     .logo {
-        margin: 10px;
+        margin: 20px;
         img {
             width: 50px;
         }
     }
 
     .main {
-        padding: 0 7em;
+        // padding: 0 7em;
 
         .header {
             padding: 1em 0;
@@ -191,7 +192,6 @@ body {
     border-radius: 15px;
     font-size: 16px;
     
-
     @include monitor {
         font-size: 14px;
     }
