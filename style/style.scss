@@ -141,11 +141,15 @@ body {
         .projects-grid {
             display: grid;
             min-width: 80%;
-            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(6em, 1fr));
             gap: 2em 1em;
             justify-content: left;
             justify-items: center;
+            transform: translateX(-25px);
 
+            @include monitor {
+                transform: translateX(-10px);
+            }
 
             .card {
                 display: flex;
@@ -156,7 +160,7 @@ body {
                 cursor: pointer;
 
                 img {
-                    width: 3em;
+                    width: 4.5em;
                 }
 
                 .circle {
@@ -181,15 +185,30 @@ body {
 
 .grid-right {
     background-color: white;
-    margin: 18px;
+    margin: 1em;
     border-radius: 15px;
     font-size: 16px;
 
+    @include monitor {
+        font-size: 14px;
+    }
+
     .header {
         display: flex;
-        margin: 30px;
+        margin: 30px 50px 20px 50px;
+
+        @include monitor {
+            flex-direction: column;
+        }
+        @include tablet {
+            flex-direction: row;
+        }
 
         .text {
+            @include monitor {
+                margin: 1em 0;
+            }
+
             h2 {
                 font-size: 1.8em;
                 margin-bottom: 10px;
@@ -206,7 +225,7 @@ body {
             align-items: flex-start;
 
             img {
-                width: 50px;
+                width: 2.5em;
             }
 
             .profile:nth-child(1) {
@@ -227,7 +246,7 @@ body {
             }
 
             .add img {
-                width: 45px;
+                width: 2.5em;
             }
         }
     }
@@ -236,7 +255,87 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 30px;
+        margin: 0 50px;
+        border-bottom: 1px solid rgb(207, 207, 207);
+        padding-bottom: .5em;
+
+        i {
+            color: rgb(194, 194, 194);
+        }
+    }
+
+    .task-list {
+        padding: 0 50px .7em 50px;
+
+        ul {
+            list-style-type: none;
+
+            li {
+                .bar {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center !important;
+                    margin: 6px 0;
+
+                    .check {
+                        margin: 0 2px;
+                        flex: .3;
+
+                        img {
+                            width: 25px;
+                            transform: translateY(3px);
+                        }
+                    }
+
+                    p {
+                        flex: 2;
+                        font-size: .8em;
+                        margin: 0 2px;
+                    }
+
+                    .approve {
+                        background-color: #E1F5F4;
+                        color: #5FC9C9;
+                        padding: .2em 1.2em;
+                        border-radius: 15px;
+                        margin: 0 2px;
+                    }
+
+                    .progress {
+                        background-color: #E4F0FD;
+                        color: #7DB3F4;
+                        padding: .2em 1em;
+                        border-radius: 15px;
+                        margin: 0 2px;
+                    }
+
+                    .review {
+                        background-color: #FDEFE9;
+                        color: #F7C0AC;
+                        padding: .2em 1.4em;
+                        border-radius: 15px;
+                        margin: 0 2px;
+                    }
+
+                    .waiting {
+                        background-color: #EDEFF0;
+                        color: #99A3B0;
+                        padding: .2em 1.7em;
+                        border-radius: 15px;
+                        margin: 0 2px;
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .upcoming {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 50px;
         border-bottom: 1px solid rgb(207, 207, 207);
         padding-bottom: 1em;
 
