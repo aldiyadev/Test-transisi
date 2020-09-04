@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,500&display=swap");
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -207,8 +209,6 @@ body {
   position: absolute;
   top: -10px;
   right: -5px;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   width: 1em;
 }
 
@@ -222,9 +222,10 @@ body {
 
 .grid-right {
   background-color: white;
-  margin: 1em;
+  margin: .8em;
   border-radius: 15px;
   font-size: 16px;
+  position: relative;
 }
 
 @media (max-width: 991px) {
@@ -415,5 +416,15 @@ body {
   padding: .2em 1.7em;
   border-radius: 15px;
   margin: 0 2px;
+}
+
+.grid-right .add-items {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  width: 50px;
+  -webkit-filter: drop-shadow(2px 2px 10px #884CC7);
+          filter: drop-shadow(2px 2px 10px #884CC7);
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
