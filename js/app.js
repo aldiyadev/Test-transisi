@@ -2,13 +2,14 @@ const add = document.querySelector('.add-items');
 const words = [
     'Create Unexpectable design', 'Post My Design to Dribble', 'Hangout With Friend', 'Upgrade PC For get Best Experience', 'Go to the Office 8.00 AM', 'Make 1 website design for my Friend', 'Create CSS Library'
 ];
-const status = ['waiting', 'In progress', 'In review', 'approve'];
+const status = ['waiting', 'In progress', 'In review', 'Approved'];
 
 
 add.addEventListener('click', function () {
 
     let word = Math.floor(Math.random() * words.length);
     console.log(words[word]);
+
     let statu = Math.floor(Math.random() * status.length);
     console.log(status[statu]);
 
