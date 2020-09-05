@@ -177,7 +177,7 @@ body .mini-2 {
   min-width: 80%;
   -ms-grid-columns: (minmax(7em, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
-  gap: 2em 1em;
+  gap: 1em .9em;
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;

@@ -166,7 +166,7 @@ body {
             display: grid;
             min-width: 80%;
             grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
-            gap: 2em 1em;
+            gap: 1em .9em;
             justify-content: left;
             justify-items: center;
             transform: translateX(-20px);
@@ -195,6 +195,7 @@ body {
                         width: 5em;
                     }
                 }
+                
 
                 .circle {
                     position: absolute;
